@@ -39,3 +39,8 @@ registry_value { 'HKLM\Software\Policies\Microsoft\Windows Defender\UX Configura
   type   => dword,
   data   => 1,
 }
+
+#removes all exculsions from Windows Defender
+registry_key { 'HKLM\Software\Policies\Microsoft\Windows Defender\Exclusions':
+  ensure => absent,
+}
